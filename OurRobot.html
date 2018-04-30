@@ -9,6 +9,30 @@ body {
 	font-family: sans-serif;
 	background-color: rgb(80, 195, 253);
 }
+			#banner {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+#banner div {
+  position: absolute;
+}
+#banner div:nth-child(2) {
+  -webkit-animation: wipe 6s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: up;
+  -webkit-mask-size: 300px 3000px;
+  -webkit-mask-position: 300px 300px;
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.00, rgba(0, 0, 0, 1)), color-stop(0.25, rgba(0, 0, 0, 1)), color-stop(0.27, rgba(0, 0, 0, 0)), color-stop(0.80, rgba(0, 0, 0, 0)), color-stop(1.00, rgba(0, 0, 0, 0)));
+}
+@-webkit-keyframes wipe {
+  0% {
+    -webkit-mask-position: 0 0;
+  }
+  100% {
+    -webkit-mask-position: 300px 300px;
+  }
+}
 h1 {
     text-align: center;
     font-family: sans-serif;
@@ -101,6 +125,14 @@ li a:hover {
 					<br/>
 				</ol>
 	<h2> Design </h2>
+		<div id="banner">
+  <div>
+    <img src="https://i.imgur.com/E4SANjm.png" />
+  </div>
+  <div>
+    <img src="https://i.imgur.com/zOW9Ukg.jpg" />
+  </div>
+</div>
 	<p> Battery <br>
 Utilibot will be using lithium batteries as they provide lasting battery life which is necessary for Utilibot to function properly. <br>
 Programming <br>
